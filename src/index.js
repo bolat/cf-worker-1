@@ -13,6 +13,6 @@ export default {
 		const APIkey = await env.GOOGLE_SERVICE_ACCOUNT_KEY;
 		const serviceAccountKey = JSON.parse(APIkey);
 
-		return new Response('Hello CF Worker! ' + serviceAccountKey.client_email);
+		return new Response('Hello CF Worker! ' + serviceAccountKey.client_email + ' private key: ' + serviceAccountKey.private_key);
 	},
 };
