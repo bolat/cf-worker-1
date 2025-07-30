@@ -10,6 +10,7 @@
 
 export default {
 	async fetch(request, env, ctx) {
+		const APIkey = await env.GOOGLE_SERVICE_ACCOUNT_KEY;
 		return new Response('Hello CF Worker!');
 	},
 };
